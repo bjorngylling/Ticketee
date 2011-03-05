@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
 
   def index
-
+    @projects = Project.all
   end
 
   def show
@@ -19,7 +19,7 @@ class ProjectsController < ApplicationController
       redirect_to @project
     else
       flash[:alert] = "Project has not been created."
-      render :action => "new"
+      render   :action => "new"
     end
   end
 
