@@ -48,6 +48,11 @@ When /^(?:|I )fill in "([^"]*)" for "([^"]*)"(?: within "([^"]*)")?$/ do |value,
   end
 end
 
+When /^I dumped the response$/ do
+  puts body
+  # capybara users puts body
+end
+
 # Use this to fill in an entire form with data from a table. Example:
 #
 #   When I fill in the following:
